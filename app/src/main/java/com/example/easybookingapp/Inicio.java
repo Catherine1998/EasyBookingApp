@@ -76,4 +76,8 @@ public class Inicio extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void IrHorario(View view){
+        Intent i = new Intent(this, horario.class);
+        startActivity(i);
+    }
 }
