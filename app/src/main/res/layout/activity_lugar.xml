@@ -98,7 +98,7 @@
         android:layout_height="233dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.357"
@@ -184,58 +184,61 @@
 
     <ImageView
         android:id="@+id/homeLugar"
-        android:layout_width="53dp"
-        android:layout_height="41dp"
+        android:layout_width="34dp"
+        android:layout_height="24dp"
         android:layout_marginTop="18dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintStart_toStartOf="@+id/toolbar11"
-        app:layout_constraintTop_toTopOf="@+id/toolbar11"
-        app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/buscarLugar"
-        android:layout_width="51dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="251dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar11"
-        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="@+id/toolbar11"
         app:layout_constraintTop_toTopOf="@+id/toolbar11"
         app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
+        android:id="@+id/buscarLugar"
+        android:layout_width="34dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="251dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar11"
+        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintStart_toStartOf="@+id/toolbar11"
+        app:layout_constraintTop_toTopOf="@+id/toolbar11"
+        app:layout_constraintVertical_bias="0.105"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
         android:id="@+id/guardarLugar"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
+        android:layout_width="34dp"
+        android:layout_height="24dp"
         android:layout_marginStart="185dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="183dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
         app:layout_constraintEnd_toEndOf="@+id/toolbar11"
+        app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toStartOf="@+id/toolbar11"
         app:layout_constraintTop_toTopOf="@+id/toolbar11"
+        app:layout_constraintVertical_bias="0.19"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/notiLugar"
-        android:layout_width="58dp"
-        android:layout_height="45dp"
+        android:layout_width="34dp"
+        android:layout_height="24dp"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="97dp"
+        android:layout_marginEnd="88dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
         app:layout_constraintEnd_toEndOf="@+id/toolbar11"
         app:layout_constraintTop_toTopOf="@+id/toolbar11"
+        app:layout_constraintVertical_bias="0.19"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -293,5 +296,67 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/LblTitAreaS"
         app:layout_constraintTop_toBottomOf="@+id/btnOeste" />
+
+    <TextView
+        android:id="@+id/lblInicioLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="343dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/TxtHome"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar11"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/toolbar11"
+        app:layout_constraintTop_toTopOf="@+id/homeLugar" />
+
+    <TextView
+        android:id="@+id/lblBuscarLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="264dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/TxtSearch"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar11"
+        app:layout_constraintStart_toStartOf="@+id/toolbar11"
+        app:layout_constraintTop_toTopOf="@+id/buscarLugar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblGuardarLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="179dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="185dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/TxtSave"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar11"
+        app:layout_constraintStart_toStartOf="@+id/toolbar11"
+        app:layout_constraintTop_toTopOf="@+id/guardarLugar" />
+
+    <TextView
+        android:id="@+id/lblNotiLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="269dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/TxtNotify"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar11"
+        app:layout_constraintStart_toStartOf="@+id/toolbar11"
+        app:layout_constraintTop_toTopOf="@+id/notiLugar"
+        app:layout_constraintVertical_bias="0.916" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
