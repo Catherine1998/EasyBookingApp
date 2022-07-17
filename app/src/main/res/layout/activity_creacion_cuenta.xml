@@ -8,14 +8,189 @@
     tools:context=".CreacionCuenta">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar18"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:id="@+id/toolbar23"
+        android:layout_width="321dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/curved_tool"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingLeft="15dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar10" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar25"
+        android:layout_width="321dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="424dp"
+        android:background="@drawable/curved_tool"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="350dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar10" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar24"
+        android:layout_width="321dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="340dp"
+        android:background="@drawable/curved_tool"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar10" />
+
+    <EditText
+        android:id="@+id/txtpassword"
+        android:layout_width="226dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/curved_input"
+        android:ems="10"
+        android:hint="@string/TxtContra"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:textColorHint="@color/cafe_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar24"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtconfirmPass"
+        android:layout_width="226dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/curved_input"
+        android:ems="10"
+        android:hint="@string/TxtConfir"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:textColorHint="@color/cafe_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar25"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtemail"
+        android:layout_width="226dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/curved_input"
+        android:ems="10"
+        android:hint="@string/TxtCorreoElect"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
+        android:textColorHint="@color/cafe_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar23"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar22"
+        android:layout_width="321dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/curved_tool"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar10" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar20"
+        android:layout_width="321dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/curved_tool"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar10" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar21"
+        android:layout_width="321dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="188dp"
+        android:background="@drawable/curved_tool"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar10" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar14"
+        android:layout_width="321dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/curved_tool"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar10" />
+
+    <EditText
+        android:id="@+id/txtnombre"
+        android:layout_width="226dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/curved_input"
+        android:ems="10"
+        android:hint="@string/TxtNombre"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        android:textColorHint="@color/cafe_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar14" />
+
+    <EditText
+        android:id="@+id/txtfecha"
+        android:layout_width="226dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/curved_input"
+        android:ems="10"
+        android:hint="@string/TxtFechaNac"
+        android:inputType="date"
+        android:paddingLeft="15dp"
+        android:textColorHint="@color/cafe_claro"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtapellido"
+        android:layout_width="226dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/curved_input"
+        android:ems="10"
+        android:hint="@string/TxtApellido"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        android:textColorHint="@color/cafe_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar22"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar9"
@@ -46,74 +221,138 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="@string/TxtCreacionC"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="26dp" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar14"
-        android:layout_width="321dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/curvedToolBar"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar10" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar15"
-        android:layout_width="409dp"
+    <CheckBox
+        android:id="@+id/checkBox_aceptar"
+        android:layout_width="259dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/TxtAceptar"
+        android:buttonTint="@color/cafe_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.611"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar25" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="248dp" />
+        android:layout_marginTop="48dp"
+        android:text="@string/BtnIniciarSession"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_aceptar" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar16"
-        android:layout_width="409dp"
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="550dp" />
+        android:layout_marginTop="48dp"
+        android:text="@string/BtnCrearCuenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar25" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar19"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="627dp" />
+    <ImageView
+        android:id="@+id/imageView_nombre"
+        android:layout_width="38dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="260dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar14"
+        app:layout_constraintStart_toStartOf="@+id/toolbar14"
+        app:layout_constraintTop_toTopOf="@+id/toolbar14"
+        tools:srcCompat="@tools:sample/avatars" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar17"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="449dp" />
+    <ImageView
+        android:id="@+id/imageView_apellido"
+        android:layout_width="38dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="260dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar20"
+        app:layout_constraintStart_toStartOf="@+id/toolbar20"
+        app:layout_constraintTop_toTopOf="@+id/toolbar20"
+        tools:srcCompat="@tools:sample/avatars" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="226dp"
-        android:layout_height="38dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/TxtNombre"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="127dp" />
+    <ImageView
+        android:id="@+id/imageView_fecha"
+        android:layout_width="38dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="260dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar21"
+        app:layout_constraintStart_toStartOf="@+id/toolbar21"
+        app:layout_constraintTop_toTopOf="@+id/toolbar21"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView_correo"
+        android:layout_width="38dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="260dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar23"
+        app:layout_constraintStart_toStartOf="@+id/toolbar23"
+        app:layout_constraintTop_toTopOf="@+id/toolbar23"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView_contra"
+        android:layout_width="38dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="260dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar24"
+        app:layout_constraintStart_toStartOf="@+id/toolbar24"
+        app:layout_constraintTop_toTopOf="@+id/toolbar24"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView_contraconfi"
+        android:layout_width="38dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="260dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar25"
+        app:layout_constraintStart_toStartOf="@+id/toolbar25"
+        app:layout_constraintTop_toTopOf="@+id/toolbar25"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="52dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/cafe_claro"
+        android:clickable="true"
+        android:onClick="IrInicio"
+        android:paddingTop="-10dp"
+        app:backgroundTint="@color/cafe_oscuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/white"
+        app:srcCompat="@drawable/flecha"
+        app:tint="@android:color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
