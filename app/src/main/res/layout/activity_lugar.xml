@@ -2,14 +2,29 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".lugar">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar13"
+        android:layout_width="413dp"
+        android:layout_height="8dp"
+        android:background="@color/naranja"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896" />
+
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar12"
-        android:layout_width="405dp"
-        android:layout_height="11dp"
+        android:layout_width="413dp"
+        android:layout_height="8dp"
         android:background="@color/naranja"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -24,14 +39,15 @@
         android:id="@+id/toolbar11"
         android:layout_width="415dp"
         android:layout_height="75dp"
-        android:layout_marginTop="656dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar10"
@@ -82,7 +98,7 @@
         android:layout_height="233dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.357"
@@ -93,11 +109,189 @@
         android:layout_width="393dp"
         android:layout_height="54dp"
         android:dropDownWidth="match_parent"
+        android:entries="@array/Lugares"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/terraza"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar10"
-        app:layout_constraintVertical_bias="0.632" />
+        app:layout_constraintVertical_bias="0.53" />
+
+    <Button
+        android:id="@+id/btnNorte"
+        android:layout_width="126dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="275dp"
+        android:layout_marginEnd="259dp"
+        android:layout_marginBottom="147dp"
+        android:text="@string/TxtElegir"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/terraza"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnEste"
+        android:layout_width="126dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="51dp"
+        android:text="@string/TxtElegir"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnSur"
+        app:layout_constraintTop_toBottomOf="@+id/btnOeste"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnSur"
+        android:layout_width="126dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="269dp"
+        android:layout_marginBottom="51dp"
+        android:text="@string/TxtElegir"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNorte"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnOeste"
+        android:layout_width="126dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="147dp"
+        android:text="@string/TxtElegir"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnNorte"
+        app:layout_constraintTop_toBottomOf="@+id/terraza"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/homeLugar"
+        android:layout_width="53dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="@+id/toolbar11"
+        app:layout_constraintTop_toTopOf="@+id/toolbar11"
+        app:layout_constraintVertical_bias="1.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/buscarLugar"
+        android:layout_width="51dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="251dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar11"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="@+id/toolbar11"
+        app:layout_constraintTop_toTopOf="@+id/toolbar11"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/guardarLugar"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="183dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar11"
+        app:layout_constraintStart_toStartOf="@+id/toolbar11"
+        app:layout_constraintTop_toTopOf="@+id/toolbar11"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/notiLugar"
+        android:layout_width="58dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar11"
+        app:layout_constraintTop_toTopOf="@+id/toolbar11"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/LblTitAreaN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="281dp"
+        android:text="@string/lblAreaN"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNorte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/terraza" />
+
+    <TextView
+        android:id="@+id/LblTitAreaS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="289dp"
+        android:layout_marginBottom="6dp"
+        android:text="@string/lblAreaS"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNorte" />
+
+    <TextView
+        android:id="@+id/LblTitAreaO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="73dp"
+        android:text="@string/lblAreaO"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnOeste"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LblTitAreaN"
+        app:layout_constraintTop_toBottomOf="@+id/terraza" />
+
+    <TextView
+        android:id="@+id/LblTitAreaE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="6dp"
+        android:text="@string/lblAreaE"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnEste"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LblTitAreaS"
+        app:layout_constraintTop_toBottomOf="@+id/btnOeste" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

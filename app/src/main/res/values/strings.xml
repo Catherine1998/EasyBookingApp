@@ -36,6 +36,20 @@
     <string name="TxtCorreoElect">Crear cuenta</string>
     <string name="TxtContra">Crear cuenta</string>
     <string name="TxtConfir">Crear cuenta</string>
+    <string name="TxtElegir">Elegir</string>
+
+    <string name="lblAreaN">Área Norte</string>
+    <string name="lblAreaS">Área Sur</string>
+    <string name="lblAreaE">Área Este</string>
+    <string name="lblAreaO">Área Oeste</string>
+
+    <string-array name="Lugares">
+        <item>Seleccione</item>
+        <item>Terraza</item>
+        <item>Jardín Principal</item>
+        <item>Primer Nivel</item>
+        <item>Segundo Nivel</item>
+    </string-array>
 
 
 </resources>
