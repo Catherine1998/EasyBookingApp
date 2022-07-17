@@ -24,6 +24,15 @@
     <string name="TxtTipoComida1">Comida gourmet</string>
     <string name="TxtTipoComida2">Pizzería</string>
 
+    <string name="TxtCreacionC">Crear cuenta</string>
+
+
+    <string name="TxtNombre">Crear cuenta</string>
+    <string name="TxtApellido">Crear cuenta</string>
+    <string name="TxtFechaNac">Crear cuenta</string>
+    <string name="TxtCorreoElect">Crear cuenta</string>
+    <string name="TxtContra">Crear cuenta</string>
+    <string name="TxtConfir">Crear cuenta</string>
 
 
 </resources>
