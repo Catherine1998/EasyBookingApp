@@ -16,10 +16,9 @@
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar22"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.01" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar25"
@@ -137,7 +136,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintHorizontal_bias="0.019"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar22"
         app:layout_constraintVertical_bias="0.0" />
@@ -146,7 +145,13 @@
         android:id="@+id/imageView3"
         android:layout_width="174dp"
         android:layout_height="296dp"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="227dp"
-        tools:layout_editor_absoluteY="198dp" />
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="164dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnJornadas"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
 </androidx.constraintlayout.widget.ConstraintLayout>
