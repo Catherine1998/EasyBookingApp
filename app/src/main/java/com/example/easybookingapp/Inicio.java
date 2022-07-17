@@ -2,9 +2,12 @@ package com.example.easybookingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
+import android.view.View;
 import com.squareup.picasso.Picasso;
 
 public class Inicio extends AppCompatActivity {
@@ -67,9 +70,10 @@ public class Inicio extends AppCompatActivity {
                 .resize(550,500)
                 .into(imagenR4);
 
-
-
     }
-
+    public void IrAlLugar(View view){
+        Intent i = new Intent(this, lugar.class);
+        startActivity(i);
+    }
 
 }
