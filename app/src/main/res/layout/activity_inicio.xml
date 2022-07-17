@@ -265,6 +265,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="IrAlLugar"
             android:paddingRight="-20dp"
             tools:srcCompat="@tools:sample/avatars" />
 
@@ -273,6 +274,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="IrAlLugar"
             android:paddingLeft="-20dp"
             tools:srcCompat="@tools:sample/avatars" />
     </LinearLayout>
@@ -320,6 +322,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="IrAlLugar"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
@@ -327,6 +330,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="IrAlLugar"
             tools:srcCompat="@tools:sample/avatars" />
     </LinearLayout>
 

@@ -24,6 +24,8 @@
     <string name="TxtTipoComida1">Comida gourmet</string>
     <string name="TxtTipoComida2">Pizzería</string>
 
+    <string name="txtTitLugar">Mapa del Restaurante</string>
+    <string name="txtNombreRestaurante">Restaurante X</string>
     <string name="TxtCreacionC">Crear cuenta</string>
 
 
