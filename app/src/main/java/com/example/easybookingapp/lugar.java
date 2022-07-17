@@ -2,6 +2,7 @@ package com.example.easybookingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.widget.ImageView;
@@ -17,7 +18,7 @@ import com.squareup.picasso.Picasso;
 
 public class lugar extends AppCompatActivity {
 
-    ImageView imagenUser, foto,imagenHome,imagenSearch,imagenSave,imagenNoti;
+    ImageView imagenUser, foto,regresar;
     Spinner cambiarImagen;
     int imagen = 0;
 
@@ -78,25 +79,14 @@ public class lugar extends AppCompatActivity {
                     .into(foto);
 
 
-        imagenHome = findViewById(R.id.homeLugar);
+        regresar = findViewById(R.id.RegresarLugar);
         Picasso.with(this)
-                .load("https://i.ibb.co/wRDhYCg/hogar.png")
-                .into(imagenHome);
-
-        imagenSearch = findViewById(R.id.buscarLugar);
-        Picasso.with(this)
-                .load("https://i.ibb.co/jMwm6CK/search.png")
-                .into(imagenSearch);
-
-        imagenSave = findViewById(R.id.guardarLugar);
-        Picasso.with(this)
-                .load("https://i.ibb.co/W5cn0bj/save.png")
-                .into(imagenSave);
-
-        imagenNoti = findViewById(R.id.notiLugar);
-        Picasso.with(this)
-                .load("https://i.ibb.co/pK63PH4/bell.png")
-                .into(imagenNoti);
-
+                .load("https://i.ibb.co/Hgd4c25/hacia-atras.png")
+                .into(regresar);
     }
+
+    public void irAtras(View view){
+        super.onBackPressed();
+    }
+
 }

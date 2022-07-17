@@ -27,7 +27,7 @@
     <string name="txtTitLugar">Mapa del Restaurante</string>
     <string name="txtNombreRestaurante">Restaurante X</string>
     <string name="TxtCreacionC">Crear cuenta</string>
-    <string name= "nombreApp">Easy Booking</string>
+    <string name="nombreApp">Easy Booking</string>
 
 
     <string name="TxtNombre">Crear cuenta</string>
@@ -44,7 +44,7 @@
     <string name="lblAreaO">Área Oeste</string>
 
     <string-array name="Lugares">
-        <item>Seleccione</item>
+        <item>Seleccionar</item>
         <item>Terraza</item>
         <item>Jardín Principal</item>
         <item>Primer Nivel</item>
