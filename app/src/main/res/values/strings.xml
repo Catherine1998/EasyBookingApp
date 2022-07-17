@@ -1,6 +1,29 @@
 <resources>
     <string name="app_name"></string>
     <string name="Bienvenida">Bienvenido a Easy Booking</string>
-    <string name="Btn_Ingresar">INGRESAR</string>
+    <string name="Btn_Ingresar">Ingresar</string>
     <string name="TxtCuenta">¿No tienes una cuenta? Regístrate</string>
+    <string name="TxtReservaciones">Reservaciones</string>
+    <string name="TxtHome">Inicio</string>
+    <string name="TxtSearch">Buscar</string>
+    <string name="TxtSave">Guardar</string>
+    <string name="TxtNotify">Notificaciones</string>
+    <string name="TextbtnTiempo">Hoy 13:00</string>
+    <string name="TextbtnLugar">Ciudad, Guatemala</string>
+    <string name="TextReserva">Reserva para hoy</string>
+    <string name="TextReservaD">Reserva para después</string>
+    <string name="TextbtnVerTodos">Ver todos</string>
+
+    <string name="TxtHora1">13:00</string>
+    <string name="TxtHora2">14:00</string>
+    <string name="TxtHora3">13:30</string>
+    <string name="TxtHora4">14:30</string>
+
+    <string name="TxtNombreR1">Restaurante x</string>
+    <string name="TxtNombreR2">Restaurante y</string>
+    <string name="TxtTipoComida1">Comida gourmet</string>
+    <string name="TxtTipoComida2">Pizzería</string>
+
+
+
 </resources>
