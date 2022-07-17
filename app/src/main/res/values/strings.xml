@@ -26,16 +26,21 @@
 
     <string name="txtTitLugar">Mapa del Restaurante</string>
     <string name="txtNombreRestaurante">Restaurante X</string>
-    <string name="TxtCreacionC">Crear cuenta</string>
-    <string name="nombreApp">Easy Booking</string>
+    <string name="TxtCreacionC">Crear Cuenta</string>
+    <string name= "nombreApp">Easy Booking</string>
 
 
-    <string name="TxtNombre">Crear cuenta</string>
-    <string name="TxtApellido">Crear cuenta</string>
-    <string name="TxtFechaNac">Crear cuenta</string>
-    <string name="TxtCorreoElect">Crear cuenta</string>
-    <string name="TxtContra">Crear cuenta</string>
-    <string name="TxtConfir">Crear cuenta</string>
+    <string name="TxtNombre">Nombre</string>
+    <string name="TxtApellido">Apellido</string>
+    <string name="TxtFechaNac">Fecha de Nacimiento</string>
+    <string name="TxtCorreoElect">Correo Electrónico</string>
+    <string name="TxtContra">Contraseña</string>
+    <string name="TxtConfir">Confirmar Contraseña</string>
+
+    <string name="TxtAceptar">Aceptar términos y condiciones</string>
+    <string name="BtnCrearCuenta">Crear Cuenta</string>
+    <string name="BtnIniciarSession">Iniciar Sesión</string>
+
     <string name="TxtElegir">Elegir</string>
 
     <string name="lblAreaN">Área Norte</string>

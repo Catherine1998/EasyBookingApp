@@ -34,4 +34,9 @@ public class MainActivity extends AppCompatActivity {
         Intent e = new Intent(this, MainActivity.class);
         startActivity(e);
     }
+
+    public void IrCrear(View view){
+        Intent f = new Intent(this, CreacionCuenta.class);
+        startActivity(f);
+    }
 }
