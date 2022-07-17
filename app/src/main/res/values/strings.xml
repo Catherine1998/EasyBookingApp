@@ -27,6 +27,7 @@
     <string name="txtTitLugar">Mapa del Restaurante</string>
     <string name="txtNombreRestaurante">Restaurante X</string>
     <string name="TxtCreacionC">Crear cuenta</string>
+    <string name= "nombreApp">Easy Booking</string>
 
 
     <string name="TxtNombre">Nombre</string>
