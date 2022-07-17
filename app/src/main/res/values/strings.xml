@@ -49,18 +49,22 @@
     <string name="lblAreaO">Área Oeste</string>
 
     <string-array name="Lugares">
-        <item>Seleccionar</item>
+        <item>Seleccione un lugar</item>
         <item>Terraza</item>
         <item>Jardín Principal</item>
         <item>Primer Nivel</item>
         <item>Segundo Nivel</item>
     </string-array>
 
-    <string name="pathTerraza">https://i.ibb.co/Qn0L6ph/restaurant-Terraz.png</string>
-    <string name="pathPlantaBaja">https://i.ibb.co/J7GQfFL/posada-rodrigo-planta-baja.jpg</string>
-    <string name="pathPlantaAlta">https://i.ibb.co/wBwprcc/planta-alta.jpg</string>
-    <string name="pathJardin">https://i.ibb.co/cyK0b00/jardin.jpg</string>
-    <string name="pathSinImagen">https://i.ibb.co/R7VfBrT/imagen.png</string>
+    <string name="lblHorario">Horarios</string>
+    <string name="lblJornada">Jornada</string>
+
+    <string-array name="Jornadas">
+        <item>Matutina</item>
+        <item>Vespertina</item>
+        <item>Nocturna</item>
+        <item>Fin de Semana</item>
+    </string-array>
 
 
 </resources>
