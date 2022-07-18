@@ -84,9 +84,10 @@ public class lugar extends AppCompatActivity {
                 .load("https://i.ibb.co/Hgd4c25/hacia-atras.png")
                 .into(regresar);
     }
-
-    public void irAtras(View view){
-        super.onBackPressed();
+    public void RegresarAlLugar(View view){
+        Intent i = new Intent(this, lugar.class);
+        startActivity(i);
     }
+
 
 }

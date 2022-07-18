@@ -5,7 +5,6 @@
     android:id="@+id/contenedor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="irAtras"
     tools:context=".lugar">
 
     <androidx.appcompat.widget.Toolbar
@@ -175,7 +174,7 @@
         android:layout_width="37dp"
         android:layout_height="32dp"
         android:layout_marginBottom="20dp"
-        android:onClick=" "
+        android:onClick="irAtras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.959"

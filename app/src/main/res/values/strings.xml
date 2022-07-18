@@ -66,5 +66,5 @@
         <item>Fin de Semana</item>
     </string-array>
 
-
+    <string name="lblBtnSeleccionarH">Seleccionar Horario</string>
 </resources>
