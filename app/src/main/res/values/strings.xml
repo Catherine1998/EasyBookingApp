@@ -27,7 +27,7 @@
     <string name="txtTitLugar">Mapa del Restaurante</string>
     <string name="txtNombreRestaurante">Restaurante X</string>
     <string name="TxtCreacionC">Crear Cuenta</string>
-    <string name= "nombreApp">Easy Booking</string>
+    <string name="nombreApp">Easy Booking</string>
 
 
     <string name="TxtNombre">Nombre</string>
@@ -65,6 +65,14 @@
         <item>Nocturna</item>
         <item>Fin de Semana</item>
     </string-array>
+
+    <string name="TxtIniciar">Iniciar Sesión</string>
+    <string name="TxtUser">Usuario</string>
+    <string name="TxtInicioContra">Contraseña</string>
+    <string name="TxtOlvido">¿Ha olvidado la contraseña?</string>
+    <string name="TxtInicioS">Iniciar Sesión</string>
+    <string name="TxtCrearCS">Crear Cuenta</string>
+
 
 
 </resources>
