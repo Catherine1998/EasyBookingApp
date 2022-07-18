@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="IrSiguiente"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -52,7 +51,7 @@
         android:layout_width="197dp"
         android:layout_height="49dp"
         android:layout_marginBottom="204dp"
-        android:onClick="IrSiguiente"
+        android:onClick="IrIniciarS"
         android:text="@string/Btn_Ingresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

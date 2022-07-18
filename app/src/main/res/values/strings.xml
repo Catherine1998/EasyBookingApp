@@ -67,4 +67,13 @@
     </string-array>
 
     <string name="lblBtnSeleccionarH">Seleccionar Horario</string>
+    <string name="TxtIniciar">Iniciar Sesión</string>
+    <string name="TxtUser">Usuario</string>
+    <string name="TxtInicioContra">Contraseña</string>
+    <string name="TxtOlvido">¿Ha olvidado la contraseña?</string>
+    <string name="TxtInicioS">Iniciar Sesión</string>
+    <string name="TxtCrearCS">Crear Cuenta</string>
+
+
+
 </resources>

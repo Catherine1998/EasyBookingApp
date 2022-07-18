@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
                 .into(imagenFondo);
     }
 
-    public void IrSiguiente(View view){
-        Intent i = new Intent(this, Inicio.class);
+    public void IrIniciarS(View view){
+        Intent i = new Intent(this, IniciarSesion.class);
         startActivity(i);
     }
 
