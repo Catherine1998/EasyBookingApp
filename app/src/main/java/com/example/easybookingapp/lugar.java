@@ -85,7 +85,12 @@ public class lugar extends AppCompatActivity {
                 .into(regresar);
     }
     public void RegresarAlLugar(View view){
-        Intent i = new Intent(this, lugar.class);
+        Intent i = new Intent(this, Inicio.class);
+        startActivity(i);
+    }
+
+    public void SeleccionarMesa(View view){
+        Intent i = new Intent(this, Reservacion.class);
         startActivity(i);
     }
 

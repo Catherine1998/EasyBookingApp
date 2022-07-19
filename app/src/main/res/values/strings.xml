@@ -27,7 +27,7 @@
     <string name="txtTitLugar">Mapa del Restaurante</string>
     <string name="txtNombreRestaurante">Restaurante X</string>
     <string name="TxtCreacionC">Crear Cuenta</string>
-    <string name= "nombreApp">Easy Booking</string>
+    <string name="nombreApp">Easy Booking</string>
 
 
     <string name="TxtNombre">Nombre</string>
@@ -63,9 +63,26 @@
         <item>Matutina</item>
         <item>Vespertina</item>
         <item>Nocturna</item>
-        <item>Fin de Semana</item>
     </string-array>
 
+    <string-array name="Dia">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miércoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </string-array>
+
+
+    <string-array name="Numero_Mesa">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
     <string name="lblBtnSeleccionarH">Seleccionar Horario</string>
     <string name="TxtIniciar">Iniciar Sesión</string>
     <string name="TxtUser">Usuario</string>
@@ -75,6 +92,20 @@
     <string name="TxtCrearCS">Crear Cuenta</string>
 
     <string name="lblHora1">De 7:00 a 8:00</string>
+
+    <string name="lblReservacion">Seleccionar una Mesa</string>
+    <string name="lblAreaX">Area X</string>
+    <string name="lblMesa1">1</string>
+    <string name="lblMesa2">2</string>
+    <string name="lblMesa3">3</string>
+    <string name="lblMesa4">4</string>
+    <string name="lblMesa5">5</string>
+
+    <string name="lblNumeroMesa">Seleccione el número de mesa</string>
+    <string name="lblReservar">Reservar</string>
+    <string name="lblLiberar">Liberar</string>
+
+
 
 
 </resources>
