@@ -74,6 +74,7 @@
     <string name="TxtInicioS">Iniciar Sesión</string>
     <string name="TxtCrearCS">Crear Cuenta</string>
 
+    <string name="lblHora1">De 7:00 a 8:00</string>
 
 
 </resources>
