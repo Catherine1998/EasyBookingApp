@@ -11,7 +11,8 @@
         android:id="@+id/spnJornadas"
         android:layout_width="376dp"
         android:layout_height="48dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="100dp"
         android:dropDownWidth="match_parent"
         android:entries="@array/Jornadas"
         android:spinnerMode="dropdown"
@@ -148,8 +149,8 @@
         android:id="@+id/jornadaView"
         android:layout_width="184dp"
         android:layout_height="247dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="157dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toTopOf="@+id/toolbar24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.932"
@@ -164,7 +165,7 @@
         android:layout_height="246dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="2dp"
-        android:layout_marginBottom="205dp"
+        android:layout_marginBottom="100dp"
         android:background="#FDFDFD"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/toolbar24"
@@ -190,26 +191,51 @@
                 android:id="@+id/chkHora2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/lblHora2" />
 
             <RadioButton
                 android:id="@+id/chkHora3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/lblHora3" />
 
             <RadioButton
                 android:id="@+id/chkHora4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/lblHora4" />
 
             <RadioButton
                 android:id="@+id/chkHora5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/lblHora5" />
         </RadioGroup>
     </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spnDias"
+        android:layout_width="376dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginBottom="11dp"
+        android:entries="@array/Dia"
+        app:layout_constraintBottom_toTopOf="@+id/spnJornadas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar22" />
+
+    <Button
+        android:id="@+id/btnSeleccionarHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="478dp"
+        android:layout_marginBottom="57dp"
+        android:text="@string/lblSeleccionarHorario"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar22"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
