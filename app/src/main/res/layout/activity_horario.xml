@@ -184,7 +184,7 @@
                 android:id="@+id/chkHora1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
+                android:text="@string/lblHora1"
                 tools:text="@string/lblHora1" />
 
             <RadioButton
