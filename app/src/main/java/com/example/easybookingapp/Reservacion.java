@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import android.widget.Button;
@@ -17,22 +18,19 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.squareup.picasso.Picasso;
 
 public class Reservacion extends AppCompatActivity {
 
     ImageView imagenUser,mesa1,mesa2,mesa3,mesa4,mesa5, regresar;
-    private Button btnReservar;
-    private TextView txtReservar;
-
+   private Button btnReservar;
+   private TextView mensaje;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservacion);
-
-        btnReservar = (Button) findViewById(R.id.btnElegirMesa);
-        txtReservar = (TextView)findViewById(R.id.idAlertTextView);
 
         imagenUser = findViewById(R.id.usuarioReserva);
         regresar = findViewById(R.id.regresarReserva);
@@ -66,27 +64,44 @@ public class Reservacion extends AppCompatActivity {
                 .load("https://i.ibb.co/vhfzTJ7/Mesa.png")
                 .into(mesa5);
 
+
+        btnReservar = (Button) findViewById(R.id.btnElegirMesa);
+        mensaje = (TextView) findViewById(R.id.idAlertTextView);
+
         btnReservar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Reservacion.this);
+
                 builder.setCancelable(true);
-                builder.setTitle("¿Desea confirmar la recervación?");
-                builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
-                builder.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getApplicationContext(),"Mesa Confirmada",Toast.LENGTH_SHORT).show();
-                    }
-                });
+                builder.setTitle("Confirmación");
+               builder.setMessage("¿Desea Confirmar la reservación?");
+               builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                   @Override
+                   public void onClick(DialogInterface dialogInterface, int i) {
+                       dialogInterface.cancel();
+                   }
+               });
+               builder.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                   @Override
+                   public void onClick(DialogInterface dialogInterface, int i) {
+                       AlertDialog.Builder builder1 = new AlertDialog.Builder(Reservacion.this);
+                       builder1.setTitle("Confirmación Exitosa");
+                       builder1.setIcon(R.drawable.controlar);
+                       builder1.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                           @Override
+                           public void onClick(DialogInterface dialogInterface, int i) {
+                               dialogInterface.cancel();
+                           }
+                       });
+                       builder1.show();
+                   }
+               });
                 builder.show();
             }
         });
+
+
     }
     public void Atras(View view){
         Intent i = new Intent(this, lugar.class);
