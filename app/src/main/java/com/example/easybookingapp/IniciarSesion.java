@@ -5,13 +5,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import com.example.easybookingapp.Model.login;
+import com.example.easybookingapp.io.EasyBookingService;
 import com.squareup.picasso.Picasso;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class IniciarSesion extends AppCompatActivity {
 
     ImageView imageViewUserIngreso, imageViewContra, imageViewUsu;
+    private Button BotonInicio;
+    private EditText txtContra, txtUsuario;
+    private String usuario, password;
+    private ProgressBar cargando;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +52,65 @@ public class IniciarSesion extends AppCompatActivity {
                 .load("https://i.ibb.co/C90h8Hf/llave.png")
                 .into(imageViewContra);
 
+        BotonInicio = findViewById(R.id.button15);
+        txtContra = findViewById(R.id.editTextTextPersonName2);
+        txtUsuario = findViewById(R.id.editTextTextPersonName);
+        cargando = findViewById(R.id.progressBar);
+
+        BotonInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                usuario = txtUsuario.getText().toString();
+                password = txtContra.getText().toString();
+                if (usuario.isEmpty() && password.isEmpty()) {
+                    Toast.makeText(IniciarSesion.this, "Ingrese los datos", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                metodoLogin(usuario, password);
+            }
+        });
+    }
+    private void metodoLogin(String usuario, String password) {
+
+        cargando.setVisibility(View.VISIBLE);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://tvjbapbmbi.execute-api.us-west-2.amazonaws.com/Prod/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        EasyBookingService retrofitAPI = retrofit.create(EasyBookingService.class);
+
+        login loginUser = new login(usuario, password);
+        Call<login> call = retrofitAPI.loginUser(loginUser);
+
+        call.enqueue(new Callback<login>() {
+            @Override
+            public void onResponse(Call<login> call, Response<login> response) {
+
+                if (response.isSuccessful()) {
+                    if (response.code() == 200) {
+                        Toast.makeText(IniciarSesion.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+                        cargando.setVisibility(View.GONE);
+                        txtUsuario.setText("");
+                        txtContra.setText("");
+                        Intent i = new Intent(IniciarSesion.this, Inicio.class);
+                        startActivity(i);
+
+                    }
+                } else {
+                    cargando.setVisibility(View.GONE);
+                    txtUsuario.setText("");
+                    txtContra.setText("");
+                    Toast.makeText(getApplicationContext(), "Inicio fallido", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<login> call, Throwable t) {
+
+            }
+        });
 
 
     }
