@@ -24,7 +24,7 @@ import com.squareup.picasso.Picasso;
 public class Reservacion extends AppCompatActivity {
 
     ImageView imagenUser,mesa1,mesa2,mesa3,mesa4,mesa5, regresar;
-   private Button btnReservar;
+   private Button btnReservar, btnLiberar;
    private TextView mensaje;
 
     @Override
@@ -67,6 +67,7 @@ public class Reservacion extends AppCompatActivity {
 
         btnReservar = (Button) findViewById(R.id.btnElegirMesa);
         mensaje = (TextView) findViewById(R.id.idAlertTextView);
+        btnLiberar= (Button) findViewById(R.id.btnLiberarMesa);
 
         btnReservar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +98,39 @@ public class Reservacion extends AppCompatActivity {
                        builder1.show();
                    }
                });
+                builder.show();
+            }
+        });
+
+        btnLiberar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(Reservacion.this);
+
+                builder.setCancelable(true);
+                builder.setTitle("Cancelación");
+                builder.setMessage("¿Desea liberar la mesa?");
+                builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        AlertDialog.Builder builder1 = new AlertDialog.Builder(Reservacion.this);
+                        builder1.setTitle("Liberación Exitosa");
+                        builder1.setIcon(R.drawable.controlar);
+                        builder1.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        });
+                        builder1.show();
+                    }
+                });
                 builder.show();
             }
         });

@@ -42,7 +42,7 @@ public class lugar extends AppCompatActivity {
                 switch(imagen) {
                     case 0:
                         Picasso.with(parent.getContext())
-                                .load("https://i.ibb.co/R7VfBrT/imagen.png")
+                                .load("https://i.ibb.co/Xywbt3d/imagen2.jpg")
                                 .into(foto);
                         break;
                     case 1:
@@ -69,13 +69,13 @@ public class lugar extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent){
                 Picasso.with(parent.getContext())
-                        .load("https://i.ibb.co/R7VfBrT/imagen.png")
+                        .load("https://i.ibb.co/Xywbt3d/imagen2.jpg")
                         .into(foto);
             }
         });
 
             Picasso.with(this)
-                    .load("https://i.ibb.co/R7VfBrT/imagen.png")
+                    .load("https://i.ibb.co/Xywbt3d/imagen2.jpg")
                     .into(foto);
 
 

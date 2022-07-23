@@ -110,6 +110,8 @@
     <string name="lblHora3">De 9:00 a 10:00</string>
     <string name="lblHora4">De 10:00 a 11:00</string>
     <string name="lblHora5">De 11:00 a 12:00</string>
+    <string name="lblAlerta">¿Desea confirmar las reservaciones?</string>
+
 
 
 </resources>
