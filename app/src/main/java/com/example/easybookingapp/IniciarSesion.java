@@ -84,11 +84,18 @@ public class IniciarSesion extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
                     if (response.code() == 200) {
-                        Toast.makeText(IniciarSesion.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+                        login responseLogin = response.body();
+
+                        String nombreUsuario = responseLogin.getNombre();
+                        String bienvenida = "Bienvenido " + nombreUsuario;
+
+                        Toast.makeText(IniciarSesion.this, bienvenida, Toast.LENGTH_SHORT).show();
                         cargando.setVisibility(View.GONE);
                         txtUsuario.setText("");
                         txtContra.setText("");
+
                         Intent i = new Intent(IniciarSesion.this, Inicio.class);
+                        i.putExtra("nombre",nombreUsuario);
                         startActivity(i);
 
                     }
@@ -96,7 +103,7 @@ public class IniciarSesion extends AppCompatActivity {
                     cargando.setVisibility(View.GONE);
                     txtUsuario.setText("");
                     txtContra.setText("");
-                    Toast.makeText(getApplicationContext(), "Inicio fallido", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Credenciales Incorrectas", Toast.LENGTH_SHORT).show();
                 }
 
             }

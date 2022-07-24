@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.ImageView;
 
 import android.view.View;
+import android.widget.TextView;
+
 import com.squareup.picasso.Picasso;
 
 public class Inicio extends AppCompatActivity {
 
     ImageView imagenUser, imagenHome, imagenSearch, imagenSave, imagenNoti, imagenR1, imagenR2, imagenR3, imagenR4;
-
+    TextView nombreUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +71,10 @@ public class Inicio extends AppCompatActivity {
                 .load("https://i.ibb.co/SrG02b9/res1.png")
                 .resize(550,500)
                 .into(imagenR4);
+
+        nombreUser = findViewById(R.id.nombreUsu);
+        String nameUsertxt = getIntent().getExtras().getString("nombre");
+        nombreUser.setText(nameUsertxt);
 
     }
     public void IrAlLugar(View view){

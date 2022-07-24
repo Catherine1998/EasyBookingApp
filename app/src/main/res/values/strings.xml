@@ -113,5 +113,8 @@
     <string name="lblAlerta">¿Desea confirmar las reservaciones?</string>
 
 
+    <string name="textViewNombre">nombre</string>
+
+
 
 </resources>

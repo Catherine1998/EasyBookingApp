@@ -3,6 +3,7 @@ package com.example.easybookingapp.Model;
 public class login {
     private String usuario;
     private String clave;
+    private String nombre;
 
     public login(String usuario, String clave) {
         this.usuario = usuario;
@@ -23,5 +24,13 @@ public class login {
 
     public void setClave(String clave) {
         this.clave = clave;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void getnombre(String nombre) {
+        this.nombre = clave;
     }
 }
