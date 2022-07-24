@@ -8,9 +8,6 @@ import retrofit2.http.POST;
 
 public interface EasyBookingService {
 
-
     @POST("api/Usuarios/Login")
     Call<login> loginUser(@Body login datosLogin);
-
-
 }

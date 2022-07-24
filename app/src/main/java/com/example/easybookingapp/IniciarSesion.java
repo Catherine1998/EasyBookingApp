@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.easybookingapp.Model.login;
+import com.example.easybookingapp.io.EasyBookingAdapter;
 import com.example.easybookingapp.io.EasyBookingService;
 import com.squareup.picasso.Picasso;
 
@@ -74,14 +75,8 @@ public class IniciarSesion extends AppCompatActivity {
 
         cargando.setVisibility(View.VISIBLE);
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://tvjbapbmbi.execute-api.us-west-2.amazonaws.com/Prod/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        EasyBookingService retrofitAPI = retrofit.create(EasyBookingService.class);
-
         login loginUser = new login(usuario, password);
-        Call<login> call = retrofitAPI.loginUser(loginUser);
+        Call<login> call = EasyBookingAdapter.getApiService().loginUser(loginUser);
 
         call.enqueue(new Callback<login>() {
             @Override
@@ -120,11 +115,6 @@ public class IniciarSesion extends AppCompatActivity {
 
     public void IrInicio(View view){
         Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
-    }
-
-        public void Ingresar(View view){
-        Intent i = new Intent(this, Inicio.class);
         startActivity(i);
     }
 
