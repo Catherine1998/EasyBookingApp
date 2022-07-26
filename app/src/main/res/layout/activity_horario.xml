@@ -185,31 +185,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/lblHora1"
+                app:buttonTint="@color/cafe_claro"
                 tools:text="@string/lblHora1" />
 
             <RadioButton
                 android:id="@+id/chkHora2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/lblHora2" />
+                android:text="@string/lblHora2"
+                app:buttonTint="@color/cafe_claro" />
 
             <RadioButton
                 android:id="@+id/chkHora3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/lblHora3" />
+                android:text="@string/lblHora3"
+                app:buttonTint="@color/cafe_claro" />
 
             <RadioButton
                 android:id="@+id/chkHora4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/lblHora4" />
+                android:text="@string/lblHora4"
+                app:buttonTint="@color/cafe_claro" />
 
             <RadioButton
                 android:id="@+id/chkHora5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/lblHora5" />
+                android:text="@string/lblHora5"
+                app:buttonTint="@color/cafe_claro" />
         </RadioGroup>
     </LinearLayout>
 
