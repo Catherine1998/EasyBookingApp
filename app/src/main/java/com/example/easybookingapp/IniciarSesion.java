@@ -94,9 +94,7 @@ public class IniciarSesion extends AppCompatActivity {
                         txtUsuario.setText("");
                         txtContra.setText("");
 
-                        Intent i = new Intent(IniciarSesion.this, Inicio.class);
-                        i.putExtra("nombre",nombreUsuario);
-                        startActivity(i);
+                       IrPaginaPrincipal(nombreUsuario);
 
                     }
                 } else {
@@ -117,7 +115,11 @@ public class IniciarSesion extends AppCompatActivity {
 
     }
 
-
+public void IrPaginaPrincipal(String nombreUsuario){
+    Intent i = new Intent(IniciarSesion.this, Inicio.class);
+    i.putExtra("nombre",nombreUsuario);
+    startActivity(i);
+}
 
 
     public void IrInicio(View view){
