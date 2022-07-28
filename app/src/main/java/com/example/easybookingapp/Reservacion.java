@@ -141,4 +141,9 @@ public class Reservacion extends AppCompatActivity {
         Intent i = new Intent(this, lugar.class);
         startActivity(i);
     }
+
+    public void CierreSesion() {
+        Intent intent = new Intent(Reservacion.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

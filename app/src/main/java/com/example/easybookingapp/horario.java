@@ -97,4 +97,9 @@ public class horario extends AppCompatActivity {
 
 
     }
+
+    public void CierreSesion() {
+        Intent intent = new Intent(horario.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

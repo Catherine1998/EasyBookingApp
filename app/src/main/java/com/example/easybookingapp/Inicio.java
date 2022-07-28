@@ -15,7 +15,6 @@ import com.squareup.picasso.Picasso;
 public class Inicio extends AppCompatActivity {
 
     ImageView imagenUser, imagenHome, imagenSearch, imagenSave, imagenNoti, imagenR1, imagenR2, imagenR3, imagenR4;
-    TextView nombreUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,16 +71,9 @@ public class Inicio extends AppCompatActivity {
                 .resize(550,500)
                 .into(imagenR4);
 
-       /* nombreUser = findViewById(R.id.nombreUsu);
-        String nameUsertxt = getIntent().getExtras().getString("nombre");
-        nombreUser.setText(nameUsertxt);*/
-
     }
 
     public void CerrarSesion(View view){
-        //cierre de sesión
-       /* SessionManagement sessionManagement = new SessionManagement(Inicio.this);
-        sessionManagement.removeSession();*/
         IrMain();
 
     }

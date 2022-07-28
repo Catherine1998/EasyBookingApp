@@ -94,5 +94,9 @@ public class lugar extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void CierreSesion() {
+        Intent intent = new Intent(lugar.this, MainActivity.class);
+        startActivity(intent);
+    }
 
 }

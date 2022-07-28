@@ -46,7 +46,7 @@ public class CreacionCuenta extends AppCompatActivity {
 
     ImageView imageViewNombre, imageViewApellido, imageViewDate, imageViewCorreo, imageViewContra, imageViewConfiContra;
     EditText fechaCampo, nombreUsuario, apellidoUsuario, correoUsuario, contraUsuario, confirmarContra;
-    String nombreU, correoU,contraU, fechaU, confirmarContraU,apellidoU;
+    String nombreU, correoU, contraU, fechaU, confirmarContraU, apellidoU;
     Button btnCreacionCuenta;
     CheckBox CheckAceptado;
     Calendar calendario;
@@ -112,14 +112,12 @@ public class CreacionCuenta extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                 new DatePickerDialog(CreacionCuenta.this,fecha, calendario.get(Calendar.YEAR), calendario.get(Calendar.MONTH), calendario.get(Calendar.DAY_OF_MONTH))
+                new DatePickerDialog(CreacionCuenta.this, fecha, calendario.get(Calendar.YEAR), calendario.get(Calendar.MONTH), calendario.get(Calendar.DAY_OF_MONTH))
                         .show();
             }
         });
 
-
-// DEFINICION DE VARIABLES
-        nombreUsuario  = findViewById(R.id.txtnombre);
+        nombreUsuario = findViewById(R.id.txtnombre);
         correoUsuario = findViewById(R.id.txtemail);
         contraUsuario = findViewById(R.id.txtpassword);
         confirmarContra = findViewById(R.id.txtconfirmPass);
@@ -128,18 +126,11 @@ public class CreacionCuenta extends AppCompatActivity {
         cargando = findViewById(R.id.progressBar);
         CheckAceptado = findViewById(R.id.checkBox_aceptar);
 
-//
         btnCreacionCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Realizar validaciones
-                    //confirm pass y pass iguales
-                // campos llenos
-                // validacion de email
-                //checkbox chequeado
-// recibo info
 
-                nombreU = nombreUsuario.getText().toString() + " " +apellidoUsuario.getText().toString();
+                nombreU = nombreUsuario.getText().toString() + " " + apellidoUsuario.getText().toString();
                 correoU = correoUsuario.getText().toString();
                 confirmarContraU = confirmarContra.getText().toString();
                 fechaU = fechaCampo.getText().toString();
@@ -149,36 +140,35 @@ public class CreacionCuenta extends AppCompatActivity {
 
                 Pattern pattern = Patterns.EMAIL_ADDRESS;
 
-                if(!pattern.matcher(correoU).matches()){
-                    Toast.makeText(getApplicationContext(),"Ingrese un correo válido",Toast.LENGTH_LONG).show();
+                if (!pattern.matcher(correoU).matches()) {
+                    Toast.makeText(getApplicationContext(), "Ingrese un correo válido", Toast.LENGTH_LONG).show();
                     return;
                 }
 
-                if(nombreU.isEmpty() || apellidoU.isEmpty() || correoU.isEmpty() || contraU.isEmpty()){
-                    Toast.makeText(getApplicationContext(),"Ingrese todos los datos",Toast.LENGTH_LONG).show();
+                if (nombreU.isEmpty() || apellidoU.isEmpty() || correoU.isEmpty() || contraU.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Ingrese todos los datos", Toast.LENGTH_LONG).show();
                     return;
                 }
-                if(confirmarContraU.isEmpty()){
-                    Toast.makeText(getApplicationContext(),"Confirme la contraseña",Toast.LENGTH_LONG).show();
+                if (confirmarContraU.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Confirme la contraseña", Toast.LENGTH_LONG).show();
                     return;
                 }
-                if(contraU.length()<8){
-                    Toast.makeText(getApplicationContext(),"La contraseña debe tener un mínimo de 8 carácteres.",Toast.LENGTH_LONG).show();
+                if (contraU.length() < 8) {
+                    Toast.makeText(getApplicationContext(), "La contraseña debe tener un mínimo de 8 carácteres.", Toast.LENGTH_LONG).show();
                 }
                 if (contraU.equals(confirmarContraU)) {
 
+                    if (CheckAceptado.isChecked()) {
 
-                    if(CheckAceptado.isChecked()){
-                        // metodo de creacion
-                        metodoCreacion(nombreU,fechaU,correoU,contraU);
+                        metodoCreacion(nombreU, fechaU, correoU, contraU);
 
                     } else {
-                        Toast.makeText(getApplicationContext(),"Acepte los términos",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Acepte los términos", Toast.LENGTH_LONG).show();
                         return;
                     }
 
-                }else {
-                    Toast.makeText(getApplicationContext(),"Las contraseñas no coinciden",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -194,11 +184,11 @@ public class CreacionCuenta extends AppCompatActivity {
     }
 
 
-    private void metodoCreacion(String nombreUsuario,String fechaUsuario, String correoUsuario, String contraUsuario ) {
+    private void metodoCreacion(String nombreUsuario, String fechaUsuario, String correoUsuario, String contraUsuario) {
 
         cargando.setVisibility(View.VISIBLE);
 
-        Usuario User = new Usuario(nombreUsuario,fechaUsuario,correoUsuario, contraUsuario);
+        Usuario User = new Usuario(nombreUsuario, fechaUsuario, correoUsuario, contraUsuario);
         Call<Usuario> call = EasyBookingAdapter.getApiService().creacionUser(User);
 
         call.enqueue(new Callback<Usuario>() {
@@ -211,7 +201,6 @@ public class CreacionCuenta extends AppCompatActivity {
                         cargando.setVisibility(View.GONE);
                         IrIniciarSession();
 
-                        //BORRADO DE CAMPOS CON .SET TEXT("");
                     }
                 } else {
                     cargando.setVisibility(View.GONE);
