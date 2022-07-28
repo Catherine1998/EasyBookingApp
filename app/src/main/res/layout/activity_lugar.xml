@@ -11,16 +11,13 @@
         android:id="@+id/toolbar13"
         android:layout_width="413dp"
         android:layout_height="8dp"
-        android:layout_marginTop="656dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="64dp"
         android:background="@color/naranja"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar11"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSur"
         app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.Toolbar
