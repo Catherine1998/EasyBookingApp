@@ -10,6 +10,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -34,6 +35,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
+import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -136,7 +138,7 @@ public class CreacionCuenta extends AppCompatActivity {
                 nombreU = nombreUsuario.getText().toString() + " " +apellidoUsuario.getText().toString();
                 correoU = correoUsuario.getText().toString();
                 confirmarContraU = confirmarContra.getText().toString();
-                fechaU = "1990-09-12";
+                fechaU = fechaCampo.getText().toString();
                 contraU = contraUsuario.getText().toString();
                 apellidoU = apellidoUsuario.getText().toString();
                 cargando = findViewById(R.id.progressBar);
@@ -147,7 +149,6 @@ public class CreacionCuenta extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Ingrese un correo válido",Toast.LENGTH_LONG).show();
                     return;
                 }
-
 
                 if(nombreU.isEmpty() || apellidoU.isEmpty() || correoU.isEmpty() || contraU.isEmpty()){
                     Toast.makeText(getApplicationContext(),"Ingrese todos los datos",Toast.LENGTH_LONG).show();
@@ -168,7 +169,6 @@ public class CreacionCuenta extends AppCompatActivity {
                     return;
                 }
 
-                 //   Toast.makeText(getApplicationContext(), fechaU, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -216,10 +216,6 @@ public class CreacionCuenta extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                     }
 
-
-                    //BORRADO DE CAMPOS CON .SET TEXT("");
-                    //  Toast.makeText(CreacionCuenta.this, response.errorBody().toString(), Toast.LENGTH_SHORT).show();
-                    // Toast.makeText(getApplicationContext(), "Error Al crear usuario", Toast.LENGTH_SHORT).show();
                 }
 
             }
