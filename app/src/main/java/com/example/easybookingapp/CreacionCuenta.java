@@ -44,7 +44,7 @@ public class CreacionCuenta extends AppCompatActivity {
     ImageView imageViewNombre, imageViewApellido, imageViewDate, imageViewCorreo, imageViewContra, imageViewConfiContra;
     EditText fechaCampo, nombreUsuario, correoUsuario, contraUsuario, confirUsuario;
     Calendar calendario;
-    String nombreU, correoU,contraU, fechaU;
+    String nombreU, correoU, contraU, fechaU;
     Button btnCreacionCuenta;
     private ProgressBar cargando;
 
@@ -107,14 +107,14 @@ public class CreacionCuenta extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                 new DatePickerDialog(CreacionCuenta.this,fecha, calendario.get(Calendar.YEAR), calendario.get(Calendar.MONTH), calendario.get(Calendar.DAY_OF_MONTH))
+                new DatePickerDialog(CreacionCuenta.this, fecha, calendario.get(Calendar.YEAR), calendario.get(Calendar.MONTH), calendario.get(Calendar.DAY_OF_MONTH))
                         .show();
             }
         });
 
 
 // DEFINICION DE VARIABLES
-        nombreUsuario  = findViewById(R.id.txtnombre);
+        nombreUsuario = findViewById(R.id.txtnombre);
         correoUsuario = findViewById(R.id.txtemail);
         contraUsuario = findViewById(R.id.txtpassword);
         confirUsuario = findViewById(R.id.txtconfirmPass);
@@ -126,7 +126,7 @@ public class CreacionCuenta extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Realizar validaciones
-                    //confirm pass y pass iguales
+                //confirm pass y pass iguales
                 // campos llenos
                 // validacion de email
                 //checkbox chequeado
@@ -139,11 +139,11 @@ public class CreacionCuenta extends AppCompatActivity {
                 cargando = findViewById(R.id.progressBar);
 
 
-                 //   Toast.makeText(getApplicationContext(), fechaU, Toast.LENGTH_SHORT).show();
+                //   Toast.makeText(getApplicationContext(), fechaU, Toast.LENGTH_SHORT).show();
 
 
                 // metodo de creacion
-                metodoCreacion(nombreU,fechaU,correoU,contraU);
+                metodoCreacion(nombreU, fechaU, correoU, contraU);
 
 
             }
@@ -162,11 +162,11 @@ public class CreacionCuenta extends AppCompatActivity {
     }
 
 
-    private void metodoCreacion(String nombreUsuario,String fechaUsuario, String correoUsuario, String contraUsuario ) {
+    private void metodoCreacion(String nombreUsuario, String fechaUsuario, String correoUsuario, String contraUsuario) {
 
         cargando.setVisibility(View.VISIBLE);
 
-        Usuario User = new Usuario(nombreUsuario,fechaUsuario,correoUsuario, contraUsuario);
+        Usuario User = new Usuario(nombreUsuario, fechaUsuario, correoUsuario, contraUsuario);
         Call<Usuario> call = EasyBookingAdapter.getApiService().creacionUser(User);
 
         call.enqueue(new Callback<Usuario>() {
@@ -186,12 +186,10 @@ public class CreacionCuenta extends AppCompatActivity {
                     try {
 
 
-
-
                         JSONObject jObjError = new JSONObject(response.errorBody().string());
-                        String errorMsg = jObjError.getString("errorMessage");
-                      String  msjNuevo = errorMsg.replace("Value","");
-                       msjNuevo = errorMsg.replace("of type java.lang.String cannot be converted to JSONObject","");
+                        String errorMsg = jObjError.toString();
+                        String msjNuevo = errorMsg.replace("Value", "");
+                        msjNuevo = errorMsg.replace("of type java.lang.String cannot be converted to JSONObject", "");
 
 
                         Toast.makeText(getApplicationContext(), msjNuevo, Toast.LENGTH_LONG).show();
@@ -200,10 +198,9 @@ public class CreacionCuenta extends AppCompatActivity {
                     }
 
 
-
                     //BORRADO DE CAMPOS CON .SET TEXT("");
-                  //  Toast.makeText(CreacionCuenta.this, response.errorBody().toString(), Toast.LENGTH_SHORT).show();
-                   // Toast.makeText(getApplicationContext(), "Error Al crear usuario", Toast.LENGTH_SHORT).show();
+                    //  Toast.makeText(CreacionCuenta.this, response.errorBody().toString(), Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(getApplicationContext(), "Error Al crear usuario", Toast.LENGTH_SHORT).show();
                 }
 
             }
