@@ -90,12 +90,12 @@ public class lugar extends AppCompatActivity {
     }
 
     public void SeleccionarMesa(View view){
-        Intent i = new Intent(this, Reservacion.class);
+        Intent i = new Intent(this, horario.class);
         startActivity(i);
     }
 
-    public void CierreSesion() {
-        Intent intent = new Intent(lugar.this, MainActivity.class);
+    public void CierreSesion(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

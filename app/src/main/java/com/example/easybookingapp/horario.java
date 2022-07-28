@@ -98,8 +98,14 @@ public class horario extends AppCompatActivity {
 
     }
 
-    public void CierreSesion() {
-        Intent intent = new Intent(horario.this, MainActivity.class);
+    public void CierreSesion(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void IrReserva(View view) {
+        Intent intent = new Intent(this, Reservacion.class);
+        startActivity(intent);
+    }
+
 }

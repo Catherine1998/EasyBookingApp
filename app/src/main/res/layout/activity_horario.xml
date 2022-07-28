@@ -237,6 +237,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="478dp"
         android:layout_marginBottom="57dp"
+        android:onClick="IrReserva"
         android:text="@string/lblSeleccionarHorario"
         app:layout_constraintBottom_toTopOf="@+id/toolbar24"
         app:layout_constraintEnd_toEndOf="parent"
