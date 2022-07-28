@@ -176,10 +176,6 @@ public class CreacionCuenta extends AppCompatActivity {
 
     }
 
-    public void IrInicio(View view) {
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
-    }
 
     public void IrIniciarSession() {
         Intent u = new Intent(CreacionCuenta.this, IniciarSesion.class);
@@ -210,9 +206,6 @@ public class CreacionCuenta extends AppCompatActivity {
                     cargando.setVisibility(View.GONE);
                     try {
 
-
-
-
                         JSONObject jObjError = new JSONObject(response.errorBody().string());
                         String errorMsg = jObjError.getString("errorMessage");
                       String  msjNuevo = errorMsg.replace("Value","");
@@ -240,6 +233,11 @@ public class CreacionCuenta extends AppCompatActivity {
         });
 
 
+    }
+
+    public void RegresarInicioSesion(View view) {
+        Intent i = new Intent(this, IniciarSesion.class);
+        startActivity(i);
     }
 
 }
