@@ -66,13 +66,13 @@
     </string-array>
 
     <string-array name="Dia">
-        <item>Lunes</item>
-        <item>Martes</item>
-        <item>Miércoles</item>
-        <item>Jueves</item>
-        <item>Viernes</item>
-        <item>Sábado</item>
-        <item>Domingo</item>
+        <item>Lunes 25</item>
+        <item>Martes 26</item>
+        <item>Miércoles 27</item>
+        <item>Jueves 28</item>
+        <item>Viernes 29</item>
+        <item>Sábado 30</item>
+        <item>Domingo 31</item>
     </string-array>
 
 
