@@ -39,7 +39,7 @@ public class IniciarSesion extends AppCompatActivity {
         imageViewUserIngreso = findViewById(R.id.imageView_IniSesion);
         Picasso.with(this)
                 .load("https://i.ibb.co/4jT8WqN/imagen-Inicio.png")
-                .resize(400,400)
+                .resize(400, 400)
                 .into(imageViewUserIngreso);
 
         imageViewUsu = findViewById(R.id.imageView_user1);
@@ -61,6 +61,14 @@ public class IniciarSesion extends AppCompatActivity {
         BotonInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                SessionManagement sessionManagement = new SessionManagement(IniciarSesion.this);
+                int userName = sessionManagement.getSession();
+                if(userName != -1){
+                    IrPaginaPrincipal();
+                }
+
+
                 usuario = txtUsuario.getText().toString();
                 password = txtContra.getText().toString();
                 if (usuario.isEmpty() && password.isEmpty()) {
@@ -71,6 +79,34 @@ public class IniciarSesion extends AppCompatActivity {
             }
         });
     }
+
+
+// se agrego
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        userLogeado();
+    }
+
+   private void userLogeado() {
+
+
+        //revisa si el usuario esta logeado
+
+        SessionManagement sessionManagement = new SessionManagement(IniciarSesion.this);
+        int userName = sessionManagement.getSession();
+        if(userName != -1){
+            //logeado
+            IrPaginaPrincipal();
+        }
+        else{
+
+
+        }
+    }
+
     private void metodoLogin(String usuario, String password) {
 
         cargando.setVisibility(View.VISIBLE);
@@ -94,7 +130,11 @@ public class IniciarSesion extends AppCompatActivity {
                         txtUsuario.setText("");
                         txtContra.setText("");
 
-                       IrPaginaPrincipal(nombreUsuario);
+                        //save session
+                        SessionManagement sessionManagement = new SessionManagement(IniciarSesion.this);
+                        sessionManagement.saveSession(loginUser);
+                        //move to principal
+                        IrPaginaPrincipal();
 
                     }
                 } else {
@@ -115,19 +155,19 @@ public class IniciarSesion extends AppCompatActivity {
 
     }
 
-public void IrPaginaPrincipal(String nombreUsuario){
-    Intent i = new Intent(IniciarSesion.this, Inicio.class);
-    i.putExtra("nombre",nombreUsuario);
-    startActivity(i);
-}
+    public void IrPaginaPrincipal() {
+        Intent i = new Intent(IniciarSesion.this, Inicio.class);
+        //i.putExtra("nombre", nombreUsuario);
+        startActivity(i);
+    }
 
 
-    public void IrInicio(View view){
+    public void IrInicio(View view) {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
 
-    public void Crear(View view){
+    public void Crear(View view) {
         Intent i = new Intent(this, CreacionCuenta.class);
         startActivity(i);
     }

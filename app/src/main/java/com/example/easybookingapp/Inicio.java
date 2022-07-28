@@ -72,11 +72,25 @@ public class Inicio extends AppCompatActivity {
                 .resize(550,500)
                 .into(imagenR4);
 
-        nombreUser = findViewById(R.id.nombreUsu);
+       /* nombreUser = findViewById(R.id.nombreUsu);
         String nameUsertxt = getIntent().getExtras().getString("nombre");
-        nombreUser.setText(nameUsertxt);
+        nombreUser.setText(nameUsertxt);*/
 
     }
+
+    public void CerrarSesion(View view){
+        //cierre de sesión
+       /* SessionManagement sessionManagement = new SessionManagement(Inicio.this);
+        sessionManagement.removeSession();*/
+        IrMain();
+
+    }
+
+    private void IrMain() {
+        Intent intent = new Intent(Inicio.this, MainActivity.class);
+        startActivity(intent);
+    }
+
     public void IrAlLugar(View view){
         Intent i = new Intent(this, lugar.class);
         startActivity(i);

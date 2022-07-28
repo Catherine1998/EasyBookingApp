@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.EasyBookingApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.EasyBookingApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/cafe_oscuro</item>
         <item name="colorPrimaryVariant">@color/cafe_claro</item>
@@ -15,6 +15,8 @@
     </style>
     <style name="DialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
         <item name="colorAccent">@color/naranja</item>
+        <item name="colorPrimary">@color/cafe_claro</item>
+        <item name="colorPrimaryDark">@color/cafe_medio</item>
     </style>
 
 
