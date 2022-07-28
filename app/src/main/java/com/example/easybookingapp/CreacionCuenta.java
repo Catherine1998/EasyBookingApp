@@ -10,6 +10,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -34,6 +35,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
+import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -42,9 +44,9 @@ import retrofit2.Response;
 public class CreacionCuenta extends AppCompatActivity {
 
     ImageView imageViewNombre, imageViewApellido, imageViewDate, imageViewCorreo, imageViewContra, imageViewConfiContra;
-    EditText fechaCampo, nombreUsuario, correoUsuario, contraUsuario, confirUsuario;
+    EditText fechaCampo, nombreUsuario, apellidoUsuario, correoUsuario, contraUsuario, confirmarContra;
     Calendar calendario;
-    String nombreU, correoU,contraU, fechaU;
+    String nombreU, correoU,contraU, fechaU, confirmarContraU,apellidoU;
     Button btnCreacionCuenta;
     private ProgressBar cargando;
 
@@ -117,8 +119,9 @@ public class CreacionCuenta extends AppCompatActivity {
         nombreUsuario  = findViewById(R.id.txtnombre);
         correoUsuario = findViewById(R.id.txtemail);
         contraUsuario = findViewById(R.id.txtpassword);
-        confirUsuario = findViewById(R.id.txtconfirmPass);
+        confirmarContra = findViewById(R.id.txtconfirmPass);
         btnCreacionCuenta = findViewById(R.id.btnCrearCuenta);
+        apellidoUsuario = findViewById(R.id.txtapellido);
         cargando = findViewById(R.id.progressBar);
 
 //
@@ -132,20 +135,42 @@ public class CreacionCuenta extends AppCompatActivity {
                 //checkbox chequeado
 // recibo info
 
-                nombreU = nombreUsuario.getText().toString();
+                nombreU = nombreUsuario.getText().toString() + " " +apellidoUsuario.getText().toString();
                 correoU = correoUsuario.getText().toString();
+                confirmarContraU = confirmarContra.getText().toString();
                 fechaU = "1990-09-12";
                 contraU = contraUsuario.getText().toString();
+                apellidoU = apellidoUsuario.getText().toString();
                 cargando = findViewById(R.id.progressBar);
 
+                Pattern pattern = Patterns.EMAIL_ADDRESS;
+
+                if(!pattern.matcher(correoU).matches()){
+                    Toast.makeText(getApplicationContext(),"Ingrese un correo válido",Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+
+                if(nombreU.isEmpty() || apellidoU.isEmpty() || correoU.isEmpty() || contraU.isEmpty()){
+                    Toast.makeText(getApplicationContext(),"Ingrese todos los datos",Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if(confirmarContraU.isEmpty()){
+                    Toast.makeText(getApplicationContext(),"Confirme la contraseña",Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if(contraU.length()<8){
+                    Toast.makeText(getApplicationContext(),"La contraseña debe tener un mínimo de 8 carácteres.",Toast.LENGTH_LONG).show();
+                }
+                if (contraU.equals(confirmarContraU)) {
+                    // metodo de creacion
+                    metodoCreacion(nombreU,fechaU,correoU,contraU);
+                }else {
+                    Toast.makeText(getApplicationContext(),"Las contraseñas no coinciden",Toast.LENGTH_LONG).show();
+                    return;
+                }
 
                  //   Toast.makeText(getApplicationContext(), fechaU, Toast.LENGTH_SHORT).show();
-
-
-                // metodo de creacion
-                metodoCreacion(nombreU,fechaU,correoU,contraU);
-
-
             }
         });
 
