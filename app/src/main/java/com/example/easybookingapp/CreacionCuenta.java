@@ -205,15 +205,8 @@ public class CreacionCuenta extends AppCompatActivity {
                 } else {
                     cargando.setVisibility(View.GONE);
                     try {
-
-
-                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-                        String errorMsg = jObjError.toString();
-                        String msjNuevo = errorMsg.replace("Value", "");
-                        msjNuevo = errorMsg.replace("of type java.lang.String cannot be converted to JSONObject", "");
-
-
-                        Toast.makeText(getApplicationContext(), msjNuevo, Toast.LENGTH_LONG).show();
+                        String error = response.errorBody().string();
+                    Toast.makeText(getApplicationContext(), error, Toast.LENGTH_LONG).show();
                     } catch (Exception e) {
                         Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                     }

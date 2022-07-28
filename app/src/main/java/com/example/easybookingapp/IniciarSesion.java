@@ -62,13 +62,6 @@ public class IniciarSesion extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                SessionManagement sessionManagement = new SessionManagement(IniciarSesion.this);
-                int userName = sessionManagement.getSession();
-                if(userName != -1){
-                    IrPaginaPrincipal();
-                }
-
-
                 usuario = txtUsuario.getText().toString();
                 password = txtContra.getText().toString();
                 if (usuario.isEmpty() && password.isEmpty()) {
@@ -80,32 +73,6 @@ public class IniciarSesion extends AppCompatActivity {
         });
     }
 
-
-// se agrego
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        userLogeado();
-    }
-
-   private void userLogeado() {
-
-
-        //revisa si el usuario esta logeado
-
-        SessionManagement sessionManagement = new SessionManagement(IniciarSesion.this);
-        int userName = sessionManagement.getSession();
-        if(userName != -1){
-            //logeado
-            IrPaginaPrincipal();
-        }
-        else{
-
-
-        }
-    }
 
     private void metodoLogin(String usuario, String password) {
 
@@ -130,10 +97,6 @@ public class IniciarSesion extends AppCompatActivity {
                         txtUsuario.setText("");
                         txtContra.setText("");
 
-                        //save session
-                        SessionManagement sessionManagement = new SessionManagement(IniciarSesion.this);
-                        sessionManagement.saveSession(loginUser);
-                        //move to principal
                         IrPaginaPrincipal();
 
                     }
