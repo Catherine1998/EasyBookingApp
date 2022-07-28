@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -45,9 +46,11 @@ public class CreacionCuenta extends AppCompatActivity {
 
     ImageView imageViewNombre, imageViewApellido, imageViewDate, imageViewCorreo, imageViewContra, imageViewConfiContra;
     EditText fechaCampo, nombreUsuario, apellidoUsuario, correoUsuario, contraUsuario, confirmarContra;
-    Calendar calendario;
     String nombreU, correoU,contraU, fechaU, confirmarContraU,apellidoU;
     Button btnCreacionCuenta;
+    CheckBox CheckAceptado;
+    Calendar calendario;
+
     private ProgressBar cargando;
 
     @Override
@@ -123,6 +126,7 @@ public class CreacionCuenta extends AppCompatActivity {
         btnCreacionCuenta = findViewById(R.id.btnCrearCuenta);
         apellidoUsuario = findViewById(R.id.txtapellido);
         cargando = findViewById(R.id.progressBar);
+        CheckAceptado = findViewById(R.id.checkBox_aceptar);
 
 //
         btnCreacionCuenta.setOnClickListener(new View.OnClickListener() {
@@ -162,8 +166,17 @@ public class CreacionCuenta extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"La contraseña debe tener un mínimo de 8 carácteres.",Toast.LENGTH_LONG).show();
                 }
                 if (contraU.equals(confirmarContraU)) {
-                    // metodo de creacion
-                    metodoCreacion(nombreU,fechaU,correoU,contraU);
+
+
+                    if(CheckAceptado.isChecked()){
+                        // metodo de creacion
+                        metodoCreacion(nombreU,fechaU,correoU,contraU);
+
+                    } else {
+                        Toast.makeText(getApplicationContext(),"Acepte los términos",Toast.LENGTH_LONG).show();
+                        return;
+                    }
+
                 }else {
                     Toast.makeText(getApplicationContext(),"Las contraseñas no coinciden",Toast.LENGTH_LONG).show();
                     return;
